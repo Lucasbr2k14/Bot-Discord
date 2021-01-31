@@ -8,6 +8,7 @@ const serverMineCommand = require("./comandos/server.js")
 const userInfo = require("./comandos/userinfo.js")
 const ajuda = require("./comandos/ajuda.js")
 const infoServer = require("./comandos/infoserver.js")
+const dado = require("./comandos/dado.js")
 
 
 /*
@@ -53,8 +54,14 @@ bot.on("message", msg =>{
 
     if(messagem == `${config.bot.prefix}infoserver`){
         infoServer(msg)
-        console.log(msg.guild.members.cache.filter(a => a.joinedAt).size)
     }
+
+    if(msg.content.startsWith(`${config.bot.prefix}d`)){
+        dado(msg)
+    }
+
+
+
 })
 
 
