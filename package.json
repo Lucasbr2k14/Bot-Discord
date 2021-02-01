@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Lucasbr2k14/Bot-Discord#readme",
   "dependencies": {
     "discord.js": "^12.5.1",
-    "minecraft-server-util": "^3.4.2"
+    "minecraft-server-util": "^3.4.2",
+    "moment-timezone": "^0.5.32"
   }
 }
