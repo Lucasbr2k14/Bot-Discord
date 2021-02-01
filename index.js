@@ -50,7 +50,7 @@ bot.on("message", msg =>{
     
 
     if(messagem == `${config.bot.prefix}ajuda`){
-        ajuda(msg)
+        ajuda(msg, bot)
     }
 
     if(messagem == `${config.bot.prefix}infoserver`){
@@ -59,12 +59,6 @@ bot.on("message", msg =>{
 
     if(msg.content.startsWith(`${config.bot.prefix}d`)){
         dado(msg)
-    }
-
-    if(msg.content == "a"){
-        const Server = guildID("780224632652693505")
-        const emoji = Server.guild.emojis.cache.first()
-        msg.channel.send(`${emoji}`)
     }
 
     if(messagem == `${config.bot.prefix}data`){
