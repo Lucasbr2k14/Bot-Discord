@@ -64,8 +64,6 @@ bot.on("message", msg =>{
     if(messagem == `${config.bot.prefix}data`){
         data(msg)
     }
-        
-
 })
 
 
