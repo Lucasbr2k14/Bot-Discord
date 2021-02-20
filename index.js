@@ -10,7 +10,7 @@ const ajuda = require("./comandos/ajuda.js")
 const infoServer = require("./comandos/infoserver.js")
 const dado = require("./comandos/dado.js")
 const data = require("./comandos/data.js")
-
+const palavraAleatoria = require("./comandos/palavraAleatoria.js")
 
 /*
 Quando o bot ficar online
@@ -64,7 +64,18 @@ bot.on("message", msg =>{
     if(messagem == `${config.bot.prefix}data`){
         data(msg)
     }
-})
 
+    if(msg.content.startsWith(`${config.bot.prefix}a`)){
+        palavraAleatoria(msg)
+
+    }
+
+    if(msg.content.startsWith(`${config.bot.prefix}fale`)){
+        const mensagem = msg.content.substr(5)
+
+        msg.channel.send(mensagem)
+    }
+
+})
 
 bot.login(config.bot.token)

@@ -1,11 +1,14 @@
 module.exports = (msg) => {
     //dependencias
-    const moment = require('moment-timezone')
+    const timezone = require('moment-timezone')
+    const moment = require('moment')
+
     
-    const Moment = moment().tz("America/Sao_Paulo").format().toLocaleString()
-    const data = new Date(Moment).toLocaleString()
+    const Timezone = timezone().tz("America/Sao_Paulo").format().toLocaleString()
+    const data = new Date(Timezone)
 
-    const Data =  data.split(" ")
+    const Data = moment(data).format("DD/MM/YYYY")
+    
 
-    msg.channel.send(data)
+    msg.channel.send(Data)
 }
